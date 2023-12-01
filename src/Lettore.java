@@ -11,45 +11,40 @@ public class Lettore {
 
         Scanner scanner = new Scanner(System.in);
 
-        System.out.println("Cosa vuoi creare? dei video delle immagine ? premi 1 per il video o 2 per l'immagine");
-        String imputNumerico = scanner.nextLine();
+        for (int j = 0; j < momoriaSdDelPlayer.length; j++) {
+            System.out.println("Cosa vuoi creare? dei video delle immagine ? premi 1 per il video o 2 per l'immagine");
+            String imputNumerico = scanner.nextLine();
 
-        if (imputNumerico.equals("1")) {
-            System.out.println("Quanti video vuoi creare? fino a 5 elementi");
-            int numero = Integer.parseInt(scanner.nextLine());
+            if (imputNumerico.equals("1")) {
+                for (int i = 0; i < 1; i++) {
+                    System.out.println("Inserisci un titolo");
+                    String titolo = scanner.nextLine();
 
-            for (int i = 0; i < numero; i++) {
-                if(numero > 5) break;
-                System.out.println("Inserisci un titolo");
-                String titolo = scanner.nextLine();
+                    System.out.println("Inserisci la durata");
+                    int durata = Integer.parseInt(scanner.nextLine());
 
-                System.out.println("Inserisci la durata");
-                int durata = Integer.parseInt(scanner.nextLine());
+                    System.out.println("Inserisci il volume");
+                    int volume = Integer.parseInt(scanner.nextLine());
 
-                System.out.println("Inserisci il volume");
-                int volume = Integer.parseInt(scanner.nextLine());
+                    System.out.println("Inserisci la luminosita");
+                    int luminosita = Integer.parseInt(scanner.nextLine());
 
-                System.out.println("Inserisci la luminosita");
-                int luminosita = Integer.parseInt(scanner.nextLine());
+                    momoriaSdDelPlayer[i] = new Video(titolo, durata, volume, luminosita);
 
-                momoriaSdDelPlayer[i] = new Video(titolo, durata, volume, luminosita);
+                }
+            } else if (imputNumerico.equals("2")) {
+                for (int i = 0; i < 1; i++) {
+                    System.out.println("Inserisci un titolo");
+                    String titoloImmagine = scanner.nextLine();
+
+                    System.out.println("Inserisci la luminosita");
+                    int luminositaImmagine = Integer.parseInt(scanner.nextLine());
+
+                    momoriaSdDelPlayer[i] = new Immagine(titoloImmagine, luminositaImmagine);
+                }
 
             }
-        } else if (imputNumerico.equals("2")) {
-            System.out.println("Quante immagini vuoi creare fino 5 elemenri?");
-            int numero = Integer.parseInt(scanner.nextLine());
-            for (int i = 0; i < numero; i++) {
-                System.out.println("Inserisci un titolo");
-                String titoloImmagine = scanner.nextLine();
-
-                System.out.println("Inserisci la luminosita");
-                int luminositaImmagine = Integer.parseInt(scanner.nextLine());
-
-                momoriaSdDelPlayer[i] = new Immagine(titoloImmagine, luminositaImmagine);
-            }
-
         }
-
         System.out.println("Questi sono gli elementi inseriti nella memoria");
         for (int i = 0; i < momoriaSdDelPlayer.length; i++) {
             System.out.println("indice n:" + (i + 1) + " " + momoriaSdDelPlayer[i]);
