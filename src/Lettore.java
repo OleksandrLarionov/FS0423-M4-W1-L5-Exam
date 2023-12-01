@@ -15,7 +15,11 @@ public class Lettore {
         String imputNumerico = scanner.nextLine();
 
         if (imputNumerico.equals("1")) {
-            for (int i = 0; i < 2; i++) {
+            System.out.println("Quanti video vuoi creare? fino a 5 elementi");
+            int numero = Integer.parseInt(scanner.nextLine());
+
+            for (int i = 0; i < numero; i++) {
+                if(numero > 5) break;
                 System.out.println("Inserisci un titolo");
                 String titolo = scanner.nextLine();
 
@@ -32,7 +36,9 @@ public class Lettore {
 
             }
         } else if (imputNumerico.equals("2")) {
-            for (int i = 0; i < 2; i++) {
+            System.out.println("Quante immagini vuoi creare fino 5 elemenri?");
+            int numero = Integer.parseInt(scanner.nextLine());
+            for (int i = 0; i < numero; i++) {
                 System.out.println("Inserisci un titolo");
                 String titoloImmagine = scanner.nextLine();
 

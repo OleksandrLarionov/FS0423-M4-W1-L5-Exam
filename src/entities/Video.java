@@ -33,6 +33,7 @@ public class Video extends ElementoMultimediale implements Volume, Luminosita {
         return "Video{" +
                 "titolo='" + titolo + '\'' +
                 ", durata=" + durata +
+                " " + "minuti" +
                 '}';
     }
 
