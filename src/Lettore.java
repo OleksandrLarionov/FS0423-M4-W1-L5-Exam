@@ -16,32 +16,32 @@ public class Lettore {
             String imputNumerico = scanner.nextLine();
 
             if (imputNumerico.equals("1")) {
-                for (int i = 0; i < 1; i++) {
-                    System.out.println("Inserisci un titolo");
-                    String titolo = scanner.nextLine();
 
-                    System.out.println("Inserisci la durata");
-                    int durata = Integer.parseInt(scanner.nextLine());
+                System.out.println("Inserisci un titolo");
+                String titolo = scanner.nextLine();
 
-                    System.out.println("Inserisci il volume");
-                    int volume = Integer.parseInt(scanner.nextLine());
+                System.out.println("Inserisci la durata");
+                int durata = Integer.parseInt(scanner.nextLine());
 
-                    System.out.println("Inserisci la luminosita");
-                    int luminosita = Integer.parseInt(scanner.nextLine());
+                System.out.println("Inserisci il volume");
+                int volume = Integer.parseInt(scanner.nextLine());
 
-                    momoriaSdDelPlayer[i] = new Video(titolo, durata, volume, luminosita);
+                System.out.println("Inserisci la luminosita");
+                int luminosita = Integer.parseInt(scanner.nextLine());
 
-                }
+                momoriaSdDelPlayer[j] = new Video(titolo, durata, volume, luminosita);
+
+
             } else if (imputNumerico.equals("2")) {
-                for (int i = 0; i < 1; i++) {
-                    System.out.println("Inserisci un titolo");
-                    String titoloImmagine = scanner.nextLine();
 
-                    System.out.println("Inserisci la luminosita");
-                    int luminositaImmagine = Integer.parseInt(scanner.nextLine());
+                System.out.println("Inserisci un titolo");
+                String titoloImmagine = scanner.nextLine();
 
-                    momoriaSdDelPlayer[i] = new Immagine(titoloImmagine, luminositaImmagine);
-                }
+                System.out.println("Inserisci la luminosita");
+                int luminositaImmagine = Integer.parseInt(scanner.nextLine());
+
+                momoriaSdDelPlayer[j] = new Immagine(titoloImmagine, luminositaImmagine);
+
 
             }
         }
