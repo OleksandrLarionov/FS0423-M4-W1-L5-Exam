@@ -51,13 +51,13 @@ public class Video extends ElementoMultimediale implements Volume, Luminosita {
 
     @Override
     public void abbassaVolume() {
-        if (volume > 0) {
-            volume--;
+        if (this.volume > 0) {
+            this.volume--;
         }
     }
 
     @Override
     public void alzaVolume() {
-        volume++;
+        this.volume++;
     }
 }
