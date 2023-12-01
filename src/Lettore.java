@@ -65,9 +65,9 @@ public class Lettore {
                 ElementoMultimediale elemento = momoriaSdDelPlayer[indice];
 
                 if (elemento instanceof Video) {
-                    ((Video) elemento).play();
+                    elemento.play();
                 } else if (elemento instanceof Immagine) {
-                    ((Immagine) elemento).show();
+                    elemento.show();
                 } else {
                     System.out.println("Non è ne uno ne altro");
                 }
