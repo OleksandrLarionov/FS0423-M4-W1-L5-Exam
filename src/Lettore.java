@@ -42,6 +42,35 @@ public class Lettore {
             System.out.println(elemento);
         }
 //        ***************Esecuzione del video*************
-        videoDue.play();
+        Scanner scanner = new Scanner(System.in);
+        while (true) {
+            System.out.print("Inserisci il numero del video che vuoi vedere ('0' per uscire): ");
+            String stringaInserita = scanner.nextLine();
+            if (stringaInserita.equals("0")) {
+                System.out.println("Arrivederci, alla prossima!");
+                break;
+            }
+            switch (stringaInserita) {
+
+                case "1":
+                    videoUno.play();
+                    break;
+                case "2":
+                    videoDue.play();
+                    break;
+                case "3":
+                    videoTre.play();
+                    break;
+                case "4":
+                    videoQuattro.play();
+                    break;
+                case "5":
+                    videoCinque.play();
+                    break;
+                default:
+                    System.out.println("Non è presente nella lista");
+                    break;
+            }
+        }
     }
 }
