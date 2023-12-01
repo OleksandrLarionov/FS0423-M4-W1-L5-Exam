@@ -16,7 +16,6 @@ public class Lettore {
             String imputNumerico = scanner.nextLine();
 
             if (imputNumerico.equals("1")) {
-
                 System.out.println("Inserisci un titolo");
                 String titolo = scanner.nextLine();
 
@@ -31,9 +30,7 @@ public class Lettore {
 
                 momoriaSdDelPlayer[j] = new Video(titolo, durata, volume, luminosita);
 
-
             } else if (imputNumerico.equals("2")) {
-
                 System.out.println("Inserisci un titolo");
                 String titoloImmagine = scanner.nextLine();
 
@@ -41,7 +38,6 @@ public class Lettore {
                 int luminositaImmagine = Integer.parseInt(scanner.nextLine());
 
                 momoriaSdDelPlayer[j] = new Immagine(titoloImmagine, luminositaImmagine);
-
 
             }
         }
