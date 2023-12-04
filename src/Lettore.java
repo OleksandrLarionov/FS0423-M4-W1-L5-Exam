@@ -77,6 +77,8 @@ public class Lettore {
                     elemento.play();
                 } else if (elemento instanceof Immagine) {
                     elemento.show();
+                } else if (elemento instanceof RegistrazioneAudio) {
+                    elemento.play();
                 } else {
                     System.out.println("Non è ne uno ne altro");
                 }

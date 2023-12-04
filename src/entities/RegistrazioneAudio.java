@@ -13,7 +13,12 @@ public class RegistrazioneAudio extends ElementoMultimediale implements Volume {
 
     @Override
     public void play() {
-        System.out.println(titolo + durata);
+        System.out.println("Il titolo del video è:" +
+                " " + titolo.toUpperCase() + "." +
+                " " + "Il volume è impostato a:" +
+                " " + "!".repeat(volume) + " " + "-" +
+                " " + "La durata:" +
+                " " + durata + "minuti" + ".");
     }
 
     @Override
