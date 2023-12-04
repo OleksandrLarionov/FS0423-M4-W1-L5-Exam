@@ -6,7 +6,7 @@ import interfaces.Volume;
 public class RegistrazioneAudio extends ElementoMultimediale implements Volume {
     private int volume;
 
-    public RegistrazioneAudio(String titolo, int durata, int volume, int luminosita) {
+    public RegistrazioneAudio(String titolo, int durata, int volume) {
         super(titolo, durata);
         this.volume = volume;
     }

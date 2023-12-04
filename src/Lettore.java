@@ -1,5 +1,6 @@
 import entities.ElementoMultimediale;
 import entities.Immagine;
+import entities.RegistrazioneAudio;
 import entities.Video;
 
 import java.util.Scanner;
@@ -12,7 +13,7 @@ public class Lettore {
         Scanner scanner = new Scanner(System.in);
 
         for (int j = 0; j < momoriaSdDelPlayer.length; j++) {
-            System.out.println("Cosa vuoi creare? dei video delle immagine ? premi 1 per il video o 2 per l'immagine");
+            System.out.println("Cosa vuoi creare? dei video delle immagine ? premi 1 per il video o 2 per l'immagine 3 per registrare un audio");
             String imputNumerico = scanner.nextLine();
 
             if (imputNumerico.equals("1")) {
@@ -39,6 +40,17 @@ public class Lettore {
 
                 momoriaSdDelPlayer[j] = new Immagine(titoloImmagine, luminositaImmagine);
 
+            } else if (imputNumerico.equals("3")) {
+                System.out.println("Inserisci un titolo");
+                String titolo = scanner.nextLine();
+
+                System.out.println("Inserisci la durata");
+                int durata = Integer.parseInt(scanner.nextLine());
+
+                System.out.println("Inserisci il volume");
+                int volume = Integer.parseInt(scanner.nextLine());
+
+                momoriaSdDelPlayer[j] = new RegistrazioneAudio(titolo, durata, volume);
             }
         }
         System.out.println("Questi sono gli elementi inseriti nella memoria");
