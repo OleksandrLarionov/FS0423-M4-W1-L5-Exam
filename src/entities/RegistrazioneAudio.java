@@ -3,14 +3,12 @@ package entities;
 import interfaces.Luminosita;
 import interfaces.Volume;
 
-public class RegistrazioneAudio extends ElementoMultimediale implements Luminosita, Volume {
+public class RegistrazioneAudio extends ElementoMultimediale implements Volume {
     private int volume;
-    private int luminosita;
 
     public RegistrazioneAudio(String titolo, int durata, int volume, int luminosita) {
         super(titolo, durata);
         this.volume = volume;
-        this.luminosita = luminosita;
     }
 
     @Override
@@ -23,18 +21,6 @@ public class RegistrazioneAudio extends ElementoMultimediale implements Luminosi
         System.out.println("Questa non è un Immagine");
     }
 
-    @Override
-    public void aumentaLuminosita() {
-        luminosita++;
-
-    }
-
-    @Override
-    public void diminuisciLuminosita() {
-        if (luminosita > 0) {
-            luminosita--;
-        }
-    }
 
     @Override
     public void abbassaVolume() {
